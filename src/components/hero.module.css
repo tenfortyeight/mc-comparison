@@ -17,9 +17,9 @@
 .heroDetails {
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
-  left: 50%;
+  left: 0;
   bottom: 0;
-  transform: translate(-50%, 0);
+  /* transform: translate(-50%, 0); */
   font-size: 14px;
   padding: 0 0.5em;
 }
@@ -32,7 +32,9 @@
 
 @media(min-width: 1000px) {
   .heroDetails {
-    font-size: 20px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0;
   }
 }
 
