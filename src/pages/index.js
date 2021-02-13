@@ -21,9 +21,7 @@ class RootIndex extends React.Component {
             <h2 className="section-headline">Bikes</h2>
             <ul className="article-list">
               {posts
-                .sort((a, b) => {
-                  return a.node.title.localeCompare(b.node.title)
-                })
+                .sort((a, b) => a.node.title.localeCompare(b.node.title))
                 .map(({ node }) => {
                   return (
                     <li key={node.slug}>
