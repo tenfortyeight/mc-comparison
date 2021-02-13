@@ -20,11 +20,13 @@ class RootIndex extends React.Component {
           <div className="wrapper">
             <h2 className="section-headline">Bikes</h2>
             <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
+              {posts
+                .sort((a, b) => a.title.localeCompare(b.title))
+                .map(({ node }) => {
+                  return (
+                    <li key={node.slug}>
+                      <ArticlePreview article={node} />
+                    </li>
                 )
               })}
             </ul>
